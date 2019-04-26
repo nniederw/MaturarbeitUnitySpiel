@@ -1,1 +1,2 @@
 2019-04-26 30min Schuss abgabe Clonen (Instantiate)
+2019-04-26 60min Einführung und Speicherung des Projektes auf GitHub mit Vater
