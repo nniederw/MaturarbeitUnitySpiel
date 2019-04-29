@@ -33,23 +33,23 @@ public class movement : MonoBehaviour
 
         if (keyManager.GoUp())
         {
-            rb.AddTorque(transform.right * -sidewaysForce);
+            rb.AddTorque(transform.right * -sidewaysForce*60 * Time.deltaTime);
         }
         if (keyManager.GoLeft())
         {
-            rb.AddTorque(transform.up * -sidewaysForce);
+            rb.AddTorque(transform.up * -sidewaysForce * 60 * Time.deltaTime);
         }
         if (keyManager.GoDown())
         {
-            rb.AddTorque(transform.right * sidewaysForce);
+            rb.AddTorque(transform.right * sidewaysForce * 60 * Time.deltaTime);
         }
         if (keyManager.GoRight())
         {
-            rb.AddTorque(transform.up * sidewaysForce);
+            rb.AddTorque(transform.up * sidewaysForce * 60 * Time.deltaTime);
         }
 
 
-        rb.AddForce(transform.forward * forwardForce);
+        rb.AddForce(transform.forward * forwardForce * 60 * Time.deltaTime);
         
 
     }

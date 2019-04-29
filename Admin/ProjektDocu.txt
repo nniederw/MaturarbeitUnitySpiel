@@ -1,2 +1,4 @@
 2019-04-26 30min Schuss abgabe Clonen (Instantiate)
 2019-04-26 60min Einführung und Speicherung des Projektes auf GitHub mit Vater
+2019-04-29 60min -Schuss an zwei orten des Raumschiffes erzeugen
+		 -Schuss geradeaus Bewegen
