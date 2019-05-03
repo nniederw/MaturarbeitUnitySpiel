@@ -2,3 +2,6 @@
 2019-04-26 60min Einführung und Speicherung des Projektes auf GitHub mit Vater
 2019-04-29 60min -Schuss an zwei orten des Raumschiffes erzeugen
 		 -Schuss geradeaus Bewegen
+2019-05-02 30min 3D Model Space Station
+	   15min Schuss nur nach einer Zeit abfeuerbar
+2019-05-03 60min kurz anhaltender Boost

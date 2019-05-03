@@ -4,7 +4,8 @@ using UnityEngine;
 
 public static class keyManager
 {
-    private static string keyshoot = "space";
+    //private static string keyshoot = "space";
+    private static string keyboost= "space";
     private static string keyup = "w";
     private static string keydown = "s";
     private static string keyright = "d";
@@ -13,7 +14,16 @@ public static class keyManager
     public static bool Shoot()
     {
         bool b = false;
-        if (Input.GetKey(keyshoot))
+        if (Input.GetMouseButtonDown(0))
+        {
+            b = true;
+        }
+        return b;
+    }
+    public static bool Boost()
+    {
+        bool b = false;
+        if (Input.GetKey(keyboost))
         {
             b = true;
         }
