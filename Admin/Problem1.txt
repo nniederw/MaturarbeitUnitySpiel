@@ -1,0 +1,2 @@
+siehe:
+https://forum.unity.com/threads/solved-movement-juddering-bug.685342

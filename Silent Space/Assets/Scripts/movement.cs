@@ -13,21 +13,16 @@ public class movement : MonoBehaviour
     private bool boost = false;
     public float forwardForce = 5;
     public float sidewaysForce = 50;
-    private float currentX;
-    private float currentY;
-    private float currentZ;
+
     private Rigidbody rb;
+
+
+    
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-    }
-    private void Update()
-    {
-        currentX = transform.rotation.x;
-        currentY = transform.rotation.y;
-        currentZ = transform.rotation.z;
-
+        
     }
 
 
@@ -74,13 +69,14 @@ public class movement : MonoBehaviour
         {
             rb.AddTorque(transform.up * sidewaysForce * 60 * Time.deltaTime);
         }
-        
+
 
 
 
         rb.AddForce(transform.forward * forwardForce * 60 * Time.deltaTime);
+        
 
 
     }
-
+    
 }

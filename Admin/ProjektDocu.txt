@@ -5,3 +5,9 @@
 2019-05-02 30min 3D Model Space Station
 	   15min Schuss nur nach einer Zeit abfeuerbar
 2019-05-03 60min kurz anhaltender Boost
+2019-05-10 60min Problem 1 versucht durch google zu lösen
+2019-05-12 60min Problem 1 vereinfacht probiert zu lösen
+2019-05-12 30min mit slomo kamera versucht zu verstehen
+2019-05-27 30min Problem 1 bei Unity Forum beschrieben
+2019-06-14 30min Problem 1 gelöst und Forum Eintrag aktualisiert
+2019-07-04 60min Spielplanung uf Blattpapier

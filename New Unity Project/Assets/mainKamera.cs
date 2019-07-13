@@ -14,7 +14,7 @@ public class mainKamera : MonoBehaviour
     
 
 
-    private void LateUpdate()
+    private void Update()
     {
         AimPos = target.transform.position + (target.transform.rotation * defaltDistance);  
         transform.position = Vector3.Slerp(transform.position, AimPos, Time.deltaTime*distanceDamp);        
