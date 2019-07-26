@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class Shot : MonoBehaviour
 {
-    public GameObject Player;
-
-    public float ShotSpeed = 50;
-    Rigidbody rb;
-    
-     void Start()
+    [SerializeField] private float ShotSpeed = 50;
+    [SerializeField] private float Livetime = 30;
+    private Rigidbody rb;
+     private void Start()
     {
-
-        
-            
-        
         rb = GetComponent<Rigidbody>();
         rb.AddForce(transform.forward * ShotSpeed, ForceMode.Impulse);
+        
+
+}
+    private void Update()
+    {
+        Destroy(gameObject, Livetime);
+        
     }
 
 }

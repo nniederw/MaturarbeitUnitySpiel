@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class shotManager : MonoBehaviour
 {
-    public GameObject shot;
-    Vector3 offset0 = new Vector3(3.51f, 1.02f, 3.76f);
-    Vector3 offset1 = new Vector3(-3.51f, 1.02f, 3.76f);
+    [SerializeField] private GameObject shot;
+    private Vector3 offset0 = new Vector3(3.51f, 1.02f, 3.76f);
+    private Vector3 offset1 = new Vector3(-3.51f, 1.02f, 3.76f);
     private float timer = 0;
-    public float delay = 1;
+    [SerializeField] private float delay = 1;
 
-    void Update()
+    private void Update()
     {
         timer = timer + Time.deltaTime;
         if (keyManager.Shoot()&(timer>=delay)) {

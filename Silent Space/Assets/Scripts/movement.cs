@@ -5,24 +5,29 @@ using UnityEngine;
 public class movement : MonoBehaviour
 {
 
-    public float boostStrength = 50;
-    public float boostDuration = 4;
-    public float boostCharge = 10;
+    [SerializeField] private float boostStrength = 50;
+    [SerializeField] private float boostDuration = 4;
+    [SerializeField] private float boostCharge = 10;
     private float boostTimerD = 0;
     private float boostTimerC = 0;
     private bool boost = false;
-    public float forwardForce = 5;
-    public float sidewaysForce = 50;
-
+    [SerializeField] private float forwardForce = 5;
+    [SerializeField] private float sidewaysForce = 50;
+    private float currentX;
+    private float currentY;
+    private float currentZ;
     private Rigidbody rb;
-
-
-    
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        
+    }
+    private void Update()
+    {
+        currentX = transform.rotation.x;
+        currentY = transform.rotation.y;
+        currentZ = transform.rotation.z;
+
     }
 
 
@@ -69,14 +74,13 @@ public class movement : MonoBehaviour
         {
             rb.AddTorque(transform.up * sidewaysForce * 60 * Time.deltaTime);
         }
-
+        
 
 
 
         rb.AddForce(transform.forward * forwardForce * 60 * Time.deltaTime);
-        
 
 
     }
-    
+
 }

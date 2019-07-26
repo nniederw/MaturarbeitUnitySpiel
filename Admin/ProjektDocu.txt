@@ -10,4 +10,7 @@
 2019-05-12 30min mit slomo kamera versucht zu verstehen
 2019-05-27 30min Problem 1 bei Unity Forum beschrieben
 2019-06-14 30min Problem 1 gelöst und Forum Eintrag aktualisiert
-2019-07-04 60min Spielplanung uf Blattpapier
+2019-07-04 60min Spielplanung auf Blattpapier
+2019-07-16 30min Lebenszeit einer Kugel
+2019-07-24 30min Variablen des Spielers
+2019-07-26 60min Menu angefangen
