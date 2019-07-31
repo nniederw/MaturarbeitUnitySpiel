@@ -14,3 +14,6 @@
 2019-07-16 30min Lebenszeit einer Kugel
 2019-07-24 30min Variablen des Spielers
 2019-07-26 60min Menu angefangen
+2019-07-27 60min Options Menu angefangen
+2019-07-28 15min Raumschiffvariablen energie/max,schildEnergie/max,Leben/max
+2019-07-31 45min Regeneration von Energie + energie zu Schild 
