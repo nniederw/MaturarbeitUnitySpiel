@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class movement : MonoBehaviour
 {
+    
 
     [SerializeField] private float boostStrength = 50;
     [SerializeField] private float boostDuration = 4;

@@ -14,6 +14,11 @@ public class variables : MonoBehaviour
     [SerializeField] private float energyRegeneration;
     [SerializeField] private float energyShieldRegeneration;
 
+    private void Start()
+    {
+        health = maxHealth;
+    }
+
 
     private void Update()
     {
