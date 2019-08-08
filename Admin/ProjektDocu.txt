@@ -12,8 +12,15 @@
 2019-06-14 30min Problem 1 gelöst und Forum Eintrag aktualisiert
 2019-07-04 60min Spielplanung auf Blattpapier
 2019-07-16 30min Lebenszeit einer Kugel
-2019-07-24 30min Variablen des Spielers
+2019-07-24 30min Variablen des Spielers 
 2019-07-26 60min Menu angefangen
 2019-07-27 60min Options Menu angefangen
 2019-07-28 15min Raumschiffvariablen energie/max,schildEnergie/max,Leben/max
+	   15min variablen public -> [SerializeField] private
 2019-07-31 45min Regeneration von Energie + energie zu Schild 
+2019-08-04 15min Scrollwheel Input
+	   60min Scrollwheel kontrolierbare Geschwindigkeit des Schiffes
+2019-08-05 30min Tasteninput neu geordnet
+2019-08-06 15min Elementen Materiale gegeben (=> Farbe) 
+2019-08-07 60min Kontrollierbare Geschwindigkeit optimiert
+2019-08-08 60min Abzug von Schiffsenergie bei Beschleunigung/ SchildEnergie erhöhung/ Schuss

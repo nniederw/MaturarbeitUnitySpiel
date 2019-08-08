@@ -5,35 +5,31 @@ using UnityEngine;
 public static class keyManager
 {
     //private static string keyshoot = "space";
-    private static string keyboost= "space";
+
+
     private static string keyup = "w";
     private static string keydown = "s";
     private static string keyright = "d";
     private static string keyleft = "a";
 
+    private static bool shoot() { return Input.GetMouseButtonDown(0); }
+    private static bool goUp() { return Input.GetKey(keyup); }
+    private static bool goDown() { return Input.GetKey(keydown); }
+    private static bool goRight() { return Input.GetKey(keyright); }
+    private static bool goLeft() { return Input.GetKey(keyleft); }
+
     public static bool Shoot()
     {
         bool b = false;
-        if (Input.GetMouseButtonDown(0))
-        {
-            b = true;
-        }
-        return b;
-    }
-    public static bool Boost()
-    {
-        bool b = false;
-        if (Input.GetKey(keyboost))
-        {
-            b = true;
-        }
+        if (shoot())
+        { b = true; }
         return b;
     }
 
     public static bool GoUp()
     {
         bool b = false;
-        if (Input.GetKey(keyup))
+        if ((goUp()))
         {
             b = true;
         }
@@ -42,7 +38,7 @@ public static class keyManager
     public static bool GoDown()
     {
         bool b = false;
-        if (Input.GetKey(keydown))
+        if (goDown())
         {
             b = true;
         }
@@ -51,7 +47,7 @@ public static class keyManager
     public static bool GoRight()
     {
         bool b = false;
-        if (Input.GetKey(keyright))
+        if (goRight())
         {
             b = true;
         }
@@ -60,7 +56,7 @@ public static class keyManager
     public static bool GoLeft()
     {
         bool b = false;
-        if (Input.GetKey(keyleft))
+        if (goLeft())
         {
             b = true;
         }

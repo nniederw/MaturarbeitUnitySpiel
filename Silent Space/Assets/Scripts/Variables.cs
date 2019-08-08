@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class variables : MonoBehaviour
 {
-
-    [SerializeField] private float energy;
+    [SerializeField] public static float energy;
     [SerializeField] private float energyShield;
     [SerializeField] private float health;
     [SerializeField] private float maxEnergy;
@@ -13,6 +12,14 @@ public class variables : MonoBehaviour
     [SerializeField] private float maxHealth;
     [SerializeField] private float energyRegeneration;
     [SerializeField] private float energyShieldRegeneration;
+    [SerializeField] private float sensitivity = 1;
+    [SerializeField] public static float ScrollWheel = 0;
+    [SerializeField] public static float shipAcceleration = 0;
+
+    private void Start()
+    {
+        health = maxHealth;
+    }
 
 
     private void Update()
@@ -20,13 +27,9 @@ public class variables : MonoBehaviour
         energy = Regeneration(energy, maxEnergy, energyRegeneration, false);
         energyShield = Regeneration(energyShield, maxEnergyShield, energyShieldRegeneration, true);
 
-
-
-
-
+        ScrollWheel += Input.GetAxis("Mouse ScrollWheel") * sensitivity;
+        shipAcceleration = ScrollWheel;
     }
-
-
 
     private float Regeneration(float n, float max, float reg, bool minusEnergie)
     {
@@ -34,11 +37,9 @@ public class variables : MonoBehaviour
         dif = 0;
         if (n != max)
         {
-
             if (n + reg * Time.deltaTime > max)
             {
                 dif = max - n;
-
             }
             else
             {
@@ -47,5 +48,14 @@ public class variables : MonoBehaviour
         }
         n = n + dif;
         return n;
+    }
+    public static float LeftEnergy()
+    {
+        
+        return energy;
+    }
+    public static void AddEnergy(float e) {
+        energy += e;
+
     }
 }

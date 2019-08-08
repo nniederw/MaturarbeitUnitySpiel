@@ -5,22 +5,21 @@ using UnityEngine;
 public class movement : MonoBehaviour
 {
 
-    [SerializeField] private float boostStrength = 50;
-    [SerializeField] private float boostDuration = 4;
-    [SerializeField] private float boostCharge = 10;
-    private float boostTimerD = 0;
-    private float boostTimerC = 0;
-    private bool boost = false;
-    [SerializeField] private float forwardForce = 5;
+    private float tempFloat = 0;
+
+    [SerializeField] public static float velocity = 10;
     [SerializeField] private float sidewaysForce = 50;
-    private float currentX;
-    private float currentY;
-    private float currentZ;
+    [SerializeField] private float accelerationSensitivity = 0.01f;
+
+    private double currentX;
+    private double currentY;
+    private double currentZ;
     private Rigidbody rb;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+
     }
     private void Update()
     {
@@ -35,26 +34,8 @@ public class movement : MonoBehaviour
     private void FixedUpdate()
     {
 
-        if (boost == false)
-        {
-            boostTimerC = boostTimerC + Time.deltaTime;
-        }
-        if (boost)
-        {
-            rb.AddForce(transform.forward * boostStrength * 60 * Time.deltaTime);
-            boostTimerD = boostTimerD + Time.deltaTime;
-            if (boostTimerD >= boostDuration)
-            {
-                boost = false;
-                boostTimerD = 0;
-            }
-        }        
-        if ((boostTimerC >= boostCharge) & (keyManager.Boost()) & (boost == false))
-        {
-            boost = true;
-            boostTimerC = 0;
-        }
 
+        rb.AddForce(variables.shipAcceleration * transform.forward);
 
 
 
@@ -74,13 +55,35 @@ public class movement : MonoBehaviour
         {
             rb.AddTorque(transform.up * sidewaysForce * 60 * Time.deltaTime);
         }
-        
+
+
+        tempFloat =  variables.shipAcceleration * accelerationSensitivity;
+        if (tempFloat >= 0)
+        {
+            if (variables.LeftEnergy(tempFloat))
+            {
+                variables.AddEnergy(tempFloat);
+                velocity += tempFloat;
+                variables.ScrollWheel -= tempFloat;
+            }
+            else {
+                variables.ScrollWheel -= tempFloat;
+
+            }
 
 
 
-        rb.AddForce(transform.forward * forwardForce * 60 * Time.deltaTime);
+        }
+        else
+        {
+            velocity = 0;
+        }
+
+        rb.velocity = velocity * transform.forward;
 
 
     }
+
+
 
 }
