@@ -11,8 +11,6 @@ public class mainKamera : MonoBehaviour
 
     private Vector3 AimPos;
     private Quaternion AimRot;
-    
-
 
     private void Update()
     {
@@ -20,8 +18,6 @@ public class mainKamera : MonoBehaviour
         transform.position = Vector3.Slerp(transform.position, AimPos, Time.deltaTime*distanceDamp);        
 
         AimRot = Quaternion.LookRotation(target.transform.position - transform.position, target.transform.up);  
-        transform.rotation = Quaternion.Lerp(transform.rotation, AimRot, rotationDamp * Time.deltaTime);       
-
-
+        transform.rotation = Quaternion.Lerp(transform.rotation, AimRot, rotationDamp * Time.deltaTime);      
     }
 }

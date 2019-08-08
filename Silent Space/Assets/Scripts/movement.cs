@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class movement : MonoBehaviour
 {
-    
-
     private float tempFloat = 0;
 
     [SerializeField] public static float velocity = 10;
@@ -20,25 +18,19 @@ public class movement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-
     }
+
     private void Update()
     {
         currentX = transform.rotation.x;
         currentY = transform.rotation.y;
         currentZ = transform.rotation.z;
-
     }
-
-
 
     private void FixedUpdate()
     {
 
-
         rb.AddForce(variables.shipAcceleration * transform.forward);
-
-
 
         if (keyManager.GoUp())
         {
@@ -57,8 +49,7 @@ public class movement : MonoBehaviour
             rb.AddTorque(transform.up * sidewaysForce * 60 * Time.deltaTime);
         }
 
-
-        tempFloat =  variables.shipAcceleration * accelerationSensitivity;
+        tempFloat = variables.shipAcceleration * accelerationSensitivity;
         if (tempFloat >= 0)
         {
             if (variables.LeftEnergy() >= tempFloat)
@@ -67,24 +58,16 @@ public class movement : MonoBehaviour
                 velocity += tempFloat;
                 variables.ScrollWheel -= tempFloat;
             }
-            else {
+            else
+            {
                 variables.ScrollWheel -= tempFloat;
-
             }
-
-
-
         }
         else
         {
             velocity = 0;
         }
 
-        rb.velocity = velocity * transform.forward;
-
-
+        rb.velocity = velocity * transform.forward;        
     }
-
-
-
 }

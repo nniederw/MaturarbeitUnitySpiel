@@ -21,7 +21,6 @@ public class variables : MonoBehaviour
         health = maxHealth;
     }
 
-
     private void Update()
     {
         energy = Regeneration(energy, maxEnergy, energyRegeneration, false);
@@ -49,13 +48,12 @@ public class variables : MonoBehaviour
         n = n + dif;
         return n;
     }
+
     public static float LeftEnergy()
-    {
-        
+    {        
         return energy;
     }
     public static void AddEnergy(float e) {
         energy += e;
-
     }
 }
