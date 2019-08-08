@@ -60,7 +60,7 @@ public class movement : MonoBehaviour
         tempFloat =  variables.shipAcceleration * accelerationSensitivity;
         if (tempFloat >= 0)
         {
-            if (variables.LeftEnergy(tempFloat))
+            if (variables.LeftEnergy() >= tempFloat)
             {
                 variables.AddEnergy(tempFloat);
                 velocity += tempFloat;
