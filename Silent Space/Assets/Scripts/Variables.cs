@@ -21,6 +21,11 @@ public class variables : MonoBehaviour
         health = maxHealth;
     }
 
+    private void Start()
+    {
+        health = maxHealth;
+    }
+
 
     private void Update()
     {
