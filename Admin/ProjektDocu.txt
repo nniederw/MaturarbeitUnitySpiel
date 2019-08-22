@@ -24,3 +24,4 @@
 2019-08-06 15min Elementen Materiale gegeben (=> Farbe) 
 2019-08-07 60min Kontrollierbare Geschwindigkeit optimiert
 2019-08-08 60min Abzug von Schiffsenergie bei Beschleunigung/ SchildEnergie erhöhung/ Schuss
+2019-08-10 60min Lebens- usw. Leiste angefangen

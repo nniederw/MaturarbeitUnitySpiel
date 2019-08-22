@@ -14,9 +14,9 @@ public class shotManager : MonoBehaviour
     private void Update()
     {
         timer += Time.deltaTime;
-        if (keyManager.Shoot() & (timer >= delay)&(variables.LeftEnergy() >= energyCost))
+        if (keyManager.Shoot() & (timer >= delay) & (variables.LeftEnergy() >= energyCost))
         {
-            variables.AddEnergy(energyCost);
+            variables.AddEnergy(energyCost * -1);
             Instantiate(shot, transform.position + transform.rotation * offset0, transform.rotation);
             Instantiate(shot, transform.position + transform.rotation * offset1, transform.rotation);
             timer = 0;

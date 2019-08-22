@@ -4,32 +4,18 @@ using UnityEngine;
 
 public class movement : MonoBehaviour
 {
-    private float tempFloat = 0;
-
     [SerializeField] public static float velocity = 10;
     [SerializeField] private float sidewaysForce = 50;
-    [SerializeField] private float accelerationSensitivity = 0.01f;
+    [SerializeField] private float accelerationEnergyCost = 0.01f;
 
-    private double currentX;
-    private double currentY;
-    private double currentZ;
     private Rigidbody rb;
-
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
 
-    private void Update()
-    {
-        currentX = transform.rotation.x;
-        currentY = transform.rotation.y;
-        currentZ = transform.rotation.z;
-    }
-
     private void FixedUpdate()
     {
-
         rb.AddForce(variables.shipAcceleration * transform.forward);
 
         if (keyManager.GoUp())
@@ -49,25 +35,23 @@ public class movement : MonoBehaviour
             rb.AddTorque(transform.up * sidewaysForce * 60 * Time.deltaTime);
         }
 
-        tempFloat = variables.shipAcceleration * accelerationSensitivity;
-        if (tempFloat >= 0)
+        if (velocity + variables.shipAcceleration >= 0)
         {
-            if (variables.LeftEnergy() >= tempFloat)
+            if (variables.LeftEnergy() >= variables.shipAcceleration)
             {
-                variables.AddEnergy(tempFloat);
-                velocity += tempFloat;
-                variables.ScrollWheel -= tempFloat;
+                variables.AddEnergy(accelerationEnergyCost * Mathf.Abs(variables.shipAcceleration) * -1);
+                velocity += variables.shipAcceleration;
+                variables.ScrollWheel -= variables.shipAcceleration * 0.2f;
             }
             else
             {
-                variables.ScrollWheel -= tempFloat;
+                variables.ScrollWheel -= variables.shipAcceleration * 0.2f;
             }
         }
         else
         {
             velocity = 0;
         }
-
-        rb.velocity = velocity * transform.forward;        
+        rb.velocity = velocity * transform.forward;
     }
 }

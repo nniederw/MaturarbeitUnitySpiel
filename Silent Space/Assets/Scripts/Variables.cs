@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class variables : MonoBehaviour
 {
-    [SerializeField] public static float energy;
-    [SerializeField] private float energyShield;
-    [SerializeField] private float health;
-    [SerializeField] private float maxEnergy;
-    [SerializeField] private float maxEnergyShield;
-    [SerializeField] private float maxHealth;
-    [SerializeField] private float energyRegeneration;
-    [SerializeField] private float energyShieldRegeneration;
+    public static float energy = 500;
+    [SerializeField] float currentEnergy = 500;
+    [SerializeField] private float energyShield = 500;
+    [SerializeField] private float health = 1000;
+    [SerializeField] private float maxEnergy = 1000;
+    [SerializeField] private float maxEnergyShield = 1000;
+    [SerializeField] private float maxHealth = 1000;
+    [SerializeField] private float energyRegeneration = 100;
+    [SerializeField] private float energyShieldRegeneration = 50;
     [SerializeField] private float sensitivity = 1;
-    [SerializeField] public static float ScrollWheel = 0;
-    [SerializeField] public static float shipAcceleration = 0;
+    public static float ScrollWheel = 0;
+    public static float shipAcceleration = 0;
+
+    private float temp;
+
 
     private void Start()
     {
@@ -23,11 +27,21 @@ public class variables : MonoBehaviour
 
     private void Update()
     {
+        currentEnergy = energy;
+
         energy = Regeneration(energy, maxEnergy, energyRegeneration, false);
-        energyShield = Regeneration(energyShield, maxEnergyShield, energyShieldRegeneration, true);
+        temp = Regeneration(energyShield, maxEnergyShield, energyShieldRegeneration, true) - energyShield;
+        if (variables.LeftEnergy() >= temp)
+        {
+            variables.AddEnergy(temp * -1);
+            energyShield += temp;
+        }
+
 
         ScrollWheel += Input.GetAxis("Mouse ScrollWheel") * sensitivity;
         shipAcceleration = ScrollWheel;
+
+        Bars.SetSize(health / maxHealth, energy / maxEnergy, energyShield / maxEnergyShield);
     }
 
     private float Regeneration(float n, float max, float reg, bool minusEnergie)
@@ -50,10 +64,11 @@ public class variables : MonoBehaviour
     }
 
     public static float LeftEnergy()
-    {        
+    {
         return energy;
     }
-    public static void AddEnergy(float e) {
+    public static void AddEnergy(float e)
+    {
         energy += e;
     }
 }
