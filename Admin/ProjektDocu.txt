@@ -25,3 +25,8 @@
 2019-08-07 60min Kontrollierbare Geschwindigkeit optimiert
 2019-08-08 60min Abzug von Schiffsenergie bei Beschleunigung/ SchildEnergie erhöhung/ Schuss
 2019-08-10 60min Lebens- usw. Leiste angefangen
+2019-08-11 60min Leiste fertig gemacht
+2019-08-12 90min Asteorid 3D model gemacht
+2019-08-12 45min Asteorids zörstörte teile mit blender addon cell fracture
+2019-08-13 45min Asteorid + zerstörte version zu Unity importieren
+

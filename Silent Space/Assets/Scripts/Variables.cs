@@ -28,7 +28,7 @@ public class variables : MonoBehaviour
     private void Update()
     {
         currentEnergy = energy;
-
+        
         energy = Regeneration(energy, maxEnergy, energyRegeneration, false);
         temp = Regeneration(energyShield, maxEnergyShield, energyShieldRegeneration, true) - energyShield;
         if (variables.LeftEnergy() >= temp)
