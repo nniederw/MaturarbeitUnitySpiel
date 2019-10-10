@@ -24,7 +24,9 @@ public class Asteorid : MonoBehaviour
     {
         if ((health <= 0) & b)
         {
-            Instantiate(destroyedAstroid, parAsteorid.transform);
+            GameObject dast;
+            dast = Instantiate(destroyedAstroid, parAsteorid.transform);
+            dast.transform.localScale = transform.localScale;
             Destroy(gameObject);            
         }
     }
