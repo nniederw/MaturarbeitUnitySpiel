@@ -12,7 +12,7 @@ public class Shot : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.AddForce(transform.forward * (movement.velocity + ShotSpeed), ForceMode.Impulse);
+        rb.AddForce(transform.forward * (movement.forwardVelocity + ShotSpeed), ForceMode.Impulse);
     }
 
     private void Update()

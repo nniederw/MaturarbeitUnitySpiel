@@ -23,7 +23,6 @@ public static class keyManager
         { b = true; }
         return b;
     }
-
     public static bool GoUp()
     {
         bool b = false;
