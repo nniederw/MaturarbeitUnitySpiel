@@ -6,7 +6,7 @@ public class Shot : MonoBehaviour
 {
 
     [SerializeField] private float ShotSpeed = 50;
-    [SerializeField] private float Livetime = 30;
+    [SerializeField] private float Livetime = 20;
     private Rigidbody rb;
 
     private void Start()
@@ -19,6 +19,4 @@ public class Shot : MonoBehaviour
     {
         Destroy(gameObject, Livetime);
     }
-
-
 }
