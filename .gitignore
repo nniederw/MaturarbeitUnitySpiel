@@ -2,25 +2,22 @@
 obj/
 bin/
 .vs/
-*.dll
-*.exe
+#*.dll
+#*.exe
 *.tmp
 Temp/
 Library/
 
-
 # Visual Studio / MonoDevelop generated
 
-ExportedObj/
-obj/
-*.svd
-*.userprefs
-/*.csproj
-*.pidb
+#ExportedObj/
+#*.svd
+#*.userprefs
+#*.pidb
 *.suo
 *.user
-*.unityproj
-*.booproj
+#*.unityproj
+#*.booproj
 
 # OS generated
 .DS_Store
