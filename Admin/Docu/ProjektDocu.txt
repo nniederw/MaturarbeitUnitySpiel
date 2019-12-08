@@ -1,34 +1,53 @@
-240min Brackeys Tutorial
-
-2019-04-26 30min Schuss abgabe Clonen (Instantiate)
-2019-04-26 60min Einführung und Speicherung des Projektes auf GitHub mit Vater
-2019-04-29 60min -Schuss an zwei orten des Raumschiffes erzeugen
-		 -Schuss geradeaus Bewegen
-2019-05-02 30min 3D Model Space Station
-	   15min Schuss nur nach einer Zeit abfeuerbar
-2019-05-03 60min kurz anhaltender Boost
-2019-05-10 60min Problem 1 versucht durch google zu lösen
-2019-05-12 60min Problem 1 vereinfacht probiert zu lösen
-2019-05-12 30min mit slomo kamera versucht zu verstehen
-2019-05-27 30min Problem 1 bei Unity Forum beschrieben
-2019-06-14 30min Problem 1 gelöst und Forum Eintrag aktualisiert
-2019-07-04 60min Spielplanung auf Blattpapier
-2019-07-16 30min Lebenszeit einer Kugel
-2019-07-24 30min Variablen des Spielers 
-2019-07-26 60min Menu angefangen
-2019-07-27 60min Options Menu angefangen
-2019-07-28 15min Raumschiffvariablen energie/max,schildEnergie/max,Leben/max
-	   15min variablen public -> [SerializeField] private
-2019-07-31 45min Regeneration von Energie + energie zu Schild 
-2019-08-04 15min Scrollwheel Input
-	   60min Scrollwheel kontrolierbare Geschwindigkeit des Schiffes
-2019-08-05 30min Tasteninput neu geordnet
-2019-08-06 15min Elementen Materiale gegeben (=> Farbe) 
-2019-08-07 60min Kontrollierbare Geschwindigkeit optimiert
-2019-08-08 60min Abzug von Schiffsenergie bei Beschleunigung/ SchildEnergie erhöhung/ Schuss
-2019-08-10 60min Lebens- usw. Leiste angefangen
-2019-08-11 60min Leiste fertig gemacht
-2019-08-12 90min Asteorid 3D model gemacht
-2019-08-12 45min Asteorids zörstörte teile mit blender addon cell fracture
-2019-08-13 45min Asteorid + zerstörte version zu Unity importieren
-
+2019-03-16,4h, Brackeys Tutorial
+2019-0?-??,??,anfang Spiel
+2019-04-26,30,Schuss abgabe Clonen (Instantiate)
+2019-04-26,60,Einführung und Speicherung des Projektes auf GitHub mit Vater
+2019-04-29,60,Schuss an zwei orten des Raumschiffes erzeugen, Schuss geradeaus Bewegen
+2019-05-02,30,3D Model Space Station
+2019-05-02,15,Schuss nur nach einer Zeit abfeuerbar
+2019-05-03,60,kurz anhaltender Boost
+2019-05-10,60,Problem 1 versucht durch google zu lösen
+2019-05-12,60,Problem 1 vereinfacht probiert zu lösen
+2019-05-12,30,mit slomo kamera versucht zu verstehen
+2019-05-27,30,Problem 1 bei Unity Forum beschrieben
+2019-06-14,30,Problem 1 gelöst und Forum Eintrag aktualisiert
+2019-07-04,60,Spielplanung auf Blattpapier
+2019-07-16,30,Lebenszeit einer Kugel
+2019-07-24,30,Variablen des Spielers
+2019-07-26,60,Menu angefangen
+2019-07-27,60,Options Menu angefangen
+2019-07-28,15,Raumschiffvariablen energie/max,schildEnergie/max,Leben/max
+2019-07-28,15,variablen public -> [SerializeField] private
+2019-07-31,45,Regeneration von Energie + energie zu Schild
+2019-08-04,15,Scrollwheel Input
+2019-08-04,60,Scrollwheel kontrolierbare Geschwindigkeit des Schiffes
+2019-08-05,30,Tasteninput neu geordnet
+2019-08-06,15,Elementen Materiale gegeben (=> Farbe)
+2019-08-07,60,Kontrollierbare Geschwindigkeit optimiert
+2019-08-08,60,Abzug von Schiffsenergie bei Beschleunigung/ SchildEnergie erhöhung/ Schuss
+2019-08-10,60,Lebens- usw. Leiste angefangen
+2019-08-11,60,Leiste fertig gemacht
+2019-08-12,90,Asteorid 3D model gemacht
+2019-08-12,45,Asteorids zörstörte teile mit blender addon cell fracture
+2019-08-13,45,Asteorid + zerstörte version zu Unity importieren
+2019-??-??,  , asteroid leben
+2019-??-??,  , asteorid zerstören
+2019-09-26,30,Gausssche formel gesucht
+2019-09-26,30,Gausssche formel bedeutungen wie „mean“ versucht zu lernen
+2019-09-26,30,Gausssche formel lmplementiert
+2019-09-27,15,bemerken dass Gausse formel nicht normalverteilte zufallszahl gibt
+2019-09-27,60,Gausssche zufallszahl rescherschiert
+2019-09-27,30,normal verteilte zahlen berechener „find name(replace)“ implementiert
+2019-09-27,30,asteroidenspawner programmiert (noch verbesserungswürdig)
+2019-10-08,60,asteoridengrösse zufällig gemacht.
+2019-??-??,7h, versuchung Spaceship controler zu verbessern
+2019-11-24,60,Mond in Blender gemacht
+2019-11-30,60,probiert den Mond in unity zu implementieren
+2019-11-30,60,Maturarbeits schreibteil struktur
+2019-12-01,60,probiert ein cube mit texturen von blender zu unity exportieren
+2019-12-01,30,Vorwort Maturarbeit
+2019-12-02,30,probiert ein material von blender zu unity exportieren
+2019-12-02,30,Einleitung 3D-Models + Asteoridmodel Maturarbeit
+2019-12-04,60,Geschützturm der den spiele treffen soll angefangen
+2019-12-04,30,Einleitung UV-sphere + Icosphere Maturarbeit
+2019-12-05,30,Geschützturm algoritmus um spieler zu treffen
