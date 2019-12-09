@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿using UnityEngine;
 public class AsteoridSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject asteorid;
@@ -15,7 +12,6 @@ public class AsteoridSpawner : MonoBehaviour
     {
         SpawnAsteorids(numbAsteorids, spacing, size);
     }
-
     void SpawnAsteorids(int numberAsteorids, float spacing, float size)
     {
         int i = 0;
@@ -31,13 +27,11 @@ public class AsteoridSpawner : MonoBehaviour
             i++;
         }
     }
-
     public static float NextGaussian()
     {
         float v1, v2, s;
         do
         {
-
             v1 = 2.0f * Random.Range(0f, 1f) - 1.0f;
             v2 = 2.0f * Random.Range(0f, 1f) - 1.0f;
             s = v1 * v1 + v2 * v2;
@@ -46,7 +40,5 @@ public class AsteoridSpawner : MonoBehaviour
         s = Mathf.Sqrt((-2.0f * Mathf.Log(s)) / s);
 
         return v1 * s;
-
-
     }
 }

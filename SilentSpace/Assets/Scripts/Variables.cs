@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿using UnityEngine;
 public class variables : MonoBehaviour
 {
     public static float energy = 500;
@@ -18,13 +15,10 @@ public class variables : MonoBehaviour
     public static float shipAcceleration = 0;
 
     private float temp;
-
-
     private void Start()
     {
         health = maxHealth;
     }
-
     private void Update()
     {
         currentEnergy = energy;
@@ -43,7 +37,6 @@ public class variables : MonoBehaviour
 
         Bars.SetSize(health / maxHealth, energy / maxEnergy, energyShield / maxEnergyShield);
     }
-
     private float Regeneration(float n, float max, float reg, bool minusEnergie)
     {
         float dif;
@@ -62,7 +55,6 @@ public class variables : MonoBehaviour
         n = n + dif;
         return n;
     }
-
     public static float LeftEnergy()
     {
         return energy;

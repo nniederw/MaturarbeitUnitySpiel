@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
   - component: {fileID: 534669906}
-  - component: {fileID: 534669908}
+  - component: {fileID: 534669907}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -308,8 +308,8 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 10000
+  near clip plane: 0.1
+  far clip plane: 1e+10
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -351,7 +351,7 @@ Skybox:
   m_GameObject: {fileID: 534669902}
   m_Enabled: 1
   m_CustomSkybox: {fileID: 2100000, guid: 712ed2f65e137384ab780f76be28b410, type: 2}
---- !u!114 &534669908
+--- !u!114 &534669907
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -360,13 +360,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 534669902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62befb7e0a5a1f740bf38f934919877b, type: 3}
+  m_Script: {fileID: 11500000, guid: 4043b9a974f5bd1439bd4e03b569e218, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1968017643}
-  distanceDamp: 3
-  rotationDamp: 5
-  defaltDistance: {x: 0, y: 10, z: -15}
+  distanceDamp: 5
+  rotationDamp: 4
+  defaltDistance: {x: 0, y: 6, z: -15}
 --- !u!1 &575685974
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,7 +893,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1085921025
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1499,7 +1499,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1386452777
 Transform:
   m_ObjectHideFlags: 0
@@ -1859,7 +1859,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1776863510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2177,7 +2177,7 @@ GameObject:
   - component: {fileID: 1968017647}
   - component: {fileID: 1968017645}
   - component: {fileID: 1968017644}
-  - component: {fileID: 1968017646}
+  - component: {fileID: 1968017652}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -2198,7 +2198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shot: {fileID: 6985186653773849127, guid: c1226913aa4707945b1b7b36d7c93312, type: 3}
-  delay: 1
+  delay: 0.2
   energyCost: 50
 --- !u!114 &1968017645
 MonoBehaviour:
@@ -2220,23 +2220,7 @@ MonoBehaviour:
   maxHealth: 1000
   energyRegeneration: 100
   energyShieldRegeneration: 50
-  sensitivity: 100
---- !u!114 &1968017646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1968017643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4aebac8643499b44cbb3bc7b37a5f579, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sidewaysForce: 50
-  accelerationEnergyCost: 0.01
-  debug: {x: 0, y: 0, z: 0}
-  debugtrans: {fileID: 0}
+  sensitivity: 2
 --- !u!64 &1968017647
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2327,6 +2311,20 @@ Transform:
   m_Father: {fileID: 1933189220}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1968017652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968017643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70eec57762ff99f4ebb8091cb1645ad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sidewaysForce: 500
+  accelerationEnergyCost: 10
 --- !u!4 &2080612900
 Transform:
   m_ObjectHideFlags: 0
