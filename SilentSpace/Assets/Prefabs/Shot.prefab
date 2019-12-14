@@ -122,5 +122,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da12affadf4a7c142a2c6d35436288d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShotSpeed: 5
+  ShotSpeed: 10
   Livetime: 30
+  SummonVelocity: {x: 0, y: 0, z: 0}
+  damage: 0
+  damagePlayer: 0

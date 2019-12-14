@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class movement : MonoBehaviour
+public class movementOld : MonoBehaviour
 {
     [SerializeField] public static float forwardVelocity = 10;
     [SerializeField] private float sidewaysForce = 50;

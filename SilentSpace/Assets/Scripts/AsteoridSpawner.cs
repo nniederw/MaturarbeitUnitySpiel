@@ -2,9 +2,9 @@
 public class AsteoridSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject asteorid;
-    [SerializeField] private int numbAsteorids;
-    [SerializeField] private float spacing;
-    [SerializeField] private float size;
+    [SerializeField] private int numbAsteorids = 500;
+    [SerializeField] private float spacing = 500;
+    [SerializeField] private float size= 20;
     private float tmpsize;
 
     private GameObject ast;

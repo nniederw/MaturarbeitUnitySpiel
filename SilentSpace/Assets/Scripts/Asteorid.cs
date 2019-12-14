@@ -23,7 +23,12 @@ public class Asteorid : MonoBehaviour
         {
             GameObject dast;
             dast = Instantiate(destroyedAstroid, parAsteorid.transform);
+            dast.transform.position = transform.position;
+            dast.transform.rotation = transform.rotation;
             dast.transform.localScale = transform.localScale;
+
+            Debug.Log("Scale Asteroid" + transform.localScale);
+
             Destroy(gameObject);            
         }
     }

@@ -31,20 +31,16 @@ public class Turret : MonoBehaviour
 
         transform.LookAt(NewPlayerPosition(distanceToPlayer));
         //transform.LookAt(currPosition);
-                if (timer >= 0.5) { 
-        Instantiate(shot, transform.position + transform.forward*1, transform.rotation);
+        if (timer >= 0.5)
+        {
+            Instantiate(shot, transform.position + transform.forward * 1, transform.rotation);
             timer -= 0.5f;
         }
         oldPosition = Target.transform.position;
 
-        
     }
-
-
-
-
     Vector3 NewPlayerPosition(float distanceToTarget) {
         float _time = distanceToTarget / bulletSpeed;
-        return _time * currVelocity;
+        return _time * currVelocity + currPosition;
     }
 }

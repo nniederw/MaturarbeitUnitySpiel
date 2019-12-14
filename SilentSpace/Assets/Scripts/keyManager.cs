@@ -5,8 +5,8 @@ using UnityEngine;
 public static class keyManager
 {
     //private static string keyshoot = "space";
-    private static string keyup = "w";
-    private static string keydown = "s";
+    private static string keyup = "s";
+    private static string keydown = "w";
     private static string keyright = "d";
     private static string keyleft = "a";
 

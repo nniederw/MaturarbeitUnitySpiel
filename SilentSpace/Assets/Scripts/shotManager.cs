@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class shotManager : MonoBehaviour
 {
@@ -8,8 +6,19 @@ public class shotManager : MonoBehaviour
     private Vector3 offset0 = new Vector3(3.51f, 1.02f, 3.76f);
     private Vector3 offset1 = new Vector3(-3.51f, 1.02f, 3.76f);
     private double timer = 0;
-    [SerializeField] private double delay = 1;
+    [SerializeField] private double delay = 0.2;
     [SerializeField] private float energyCost = 50;
+    [SerializeField] private float shotDamage = 300;
+
+    private Shot scriptShot;
+    private GameObject instantiateShot;
+
+
+    private Rigidbody rb;
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
 
     private void Update()
     {
@@ -17,9 +26,21 @@ public class shotManager : MonoBehaviour
         if (keyManager.Shoot() & (timer >= delay) & (variables.LeftEnergy() >= energyCost))
         {
             variables.AddEnergy(energyCost * -1);
-            Instantiate(shot, transform.position + transform.rotation * offset0, transform.rotation);
-            Instantiate(shot, transform.position + transform.rotation * offset1, transform.rotation);
+
+            doShoting(shot,transform.position + transform.rotation * offset0, transform.rotation,shotDamage,false,rb.velocity);
+            doShoting(shot, transform.position + transform.rotation * offset1, transform.rotation, shotDamage, false, rb.velocity);
             timer = 0;
         }
     }
+
+    void doShoting(GameObject _shot, Vector3 _position, Quaternion _rotation, float _damage, bool _damagePlayer, Vector3 _SummonVelocity) {
+
+        instantiateShot = Instantiate(_shot, _position, _rotation);
+        scriptShot = instantiateShot.gameObject.GetComponent<Shot>();
+
+        scriptShot.SummonVelocity = _SummonVelocity;
+        scriptShot.damage = _damage;
+        scriptShot.damagePlayer = _damagePlayer;
+
+        }
 }

@@ -10,9 +10,11 @@ public class variables : MonoBehaviour
     [SerializeField] private float maxHealth = 1000;
     [SerializeField] private float energyRegeneration = 100;
     [SerializeField] private float energyShieldRegeneration = 50;
-    [SerializeField] private float sensitivity = 1;
+    [SerializeField] private float sensitivity = 2;
     public static float ScrollWheel = 0;
     public static float shipAcceleration = 0;
+
+    private Shot shot;
 
     private float temp;
     private void Start()
@@ -62,5 +64,18 @@ public class variables : MonoBehaviour
     public static void AddEnergy(float e)
     {
         energy += e;
+    }
+
+    private void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.tag == "Shot")
+        {
+            shot = col.gameObject.GetComponent<Shot>();
+            if (shot.damagePlayer) 
+            {
+                health -= shot.damage;
+                Destroy(col.gameObject);
+            }
+        }
     }
 }
