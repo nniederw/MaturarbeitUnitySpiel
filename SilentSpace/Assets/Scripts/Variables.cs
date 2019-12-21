@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-public class variables : MonoBehaviour
+public class Variables : MonoBehaviour
 {
     public static float energy = 500;
     [SerializeField] float currentEnergy = 500;
