@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class shotManager : MonoBehaviour
+public class ShotManager : MonoBehaviour
 {
     [SerializeField] private GameObject shot;
     private Vector3 offset0 = new Vector3(3.51f, 1.02f, 3.76f);
@@ -23,9 +23,9 @@ public class shotManager : MonoBehaviour
     private void Update()
     {
         timer += Time.deltaTime;
-        if (keyManager.Shoot() & (timer >= delay) & (variables.LeftEnergy() >= energyCost))
+        if (KeyManager.Shoot() & (timer >= delay) & (Variables.LeftEnergy() >= energyCost))
         {
-            variables.AddEnergy(energyCost * -1);
+            Variables.AddEnergy(energyCost * -1);
 
             doShoting(shot,transform.position + transform.rotation * offset0, transform.rotation,shotDamage,false,rb.velocity);
             doShoting(shot, transform.position + transform.rotation * offset1, transform.rotation, shotDamage, false, rb.velocity);

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
-public class mainKamera : MonoBehaviour
+public class MainKamera : MonoBehaviour
 {
-    [SerializeField] private GameObject target;
+    [SerializeField] private GameObject target = null;
     [SerializeField] private float distanceDamp = 5;
     [SerializeField] private float rotationDamp = 4;
     [SerializeField] private Vector3 defaltDistance = new Vector3(0, 6, -15);

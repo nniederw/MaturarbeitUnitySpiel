@@ -16,19 +16,19 @@ public class FirstPerson : MonoBehaviour
 
     void Update()
     {
-        if (keyManager.GoUp())
+        if (KeyManager.GoUp())
         {
             rb.AddForce(transform.forward * wakingSpeed);
         }
-        if (keyManager.GoDown())
+        if (KeyManager.GoDown())
         {
             rb.AddForce(transform.forward * -1 * wakingSpeed);
         }
-        if (keyManager.GoLeft())
+        if (KeyManager.GoLeft())
         {
             rb.AddForce(transform.right * -1 * wakingSpeed);
         }
-        if (keyManager.GoRight())
+        if (KeyManager.GoRight())
         {
             rb.AddForce(transform.right * wakingSpeed);
         }

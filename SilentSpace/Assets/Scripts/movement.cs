@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class movement : MonoBehaviour
+public class Movement : MonoBehaviour
 {
     [SerializeField] public static float velocity = 10;
     [SerializeField] private float sidewaysForce = 500;
@@ -14,36 +14,36 @@ public class movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.AddForce(variables.shipAcceleration * transform.forward);
+        rb.AddForce(Variables.shipAcceleration * transform.forward);
 
-        if (keyManager.GoUp())
+        if (KeyManager.GoUp())
         {
             rb.AddTorque(transform.right * -sidewaysForce * 60 * Time.deltaTime);
         }
-        if (keyManager.GoLeft())
+        if (KeyManager.GoLeft())
         {
             rb.AddTorque(transform.up * -sidewaysForce * 60 * Time.deltaTime);
         }
-        if (keyManager.GoDown())
+        if (KeyManager.GoDown())
         {
             rb.AddTorque(transform.right * sidewaysForce * 60 * Time.deltaTime);
         }
-        if (keyManager.GoRight())
+        if (KeyManager.GoRight())
         {
             rb.AddTorque(transform.up * sidewaysForce * 60 * Time.deltaTime);
         }
 
-        if (velocity + variables.shipAcceleration >= 0)
+        if (velocity + Variables.shipAcceleration >= 0)
         {
-            if (variables.LeftEnergy() >= variables.shipAcceleration)
+            if (Variables.LeftEnergy() >= Variables.shipAcceleration)
             {
-                variables.AddEnergy(accelerationEnergyCost * Mathf.Abs(variables.shipAcceleration) * -1);
-                velocity += variables.shipAcceleration;
-                variables.ScrollWheel -= variables.shipAcceleration * 0.2f;
+                Variables.AddEnergy(accelerationEnergyCost * Mathf.Abs(Variables.shipAcceleration) * -1);
+                velocity += Variables.shipAcceleration;
+                Variables.ScrollWheel -= Variables.shipAcceleration * 0.2f;
             }
             else
             {
-                variables.ScrollWheel -= variables.shipAcceleration * 0.2f;
+                Variables.ScrollWheel -= Variables.shipAcceleration * 0.2f;
             }
         }
         else

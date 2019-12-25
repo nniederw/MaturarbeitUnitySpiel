@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class keyManager
+public static class KeyManager
 {
     //private static string keyshoot = "space";
     private static string keyup = "s";

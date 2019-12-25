@@ -27,9 +27,9 @@ public class Variables : MonoBehaviour
         
         energy = Regeneration(energy, maxEnergy, energyRegeneration, false);
         temp = Regeneration(energyShield, maxEnergyShield, energyShieldRegeneration, true) - energyShield;
-        if (variables.LeftEnergy() >= temp)
+        if (Variables.LeftEnergy() >= temp)
         {
-            variables.AddEnergy(temp * -1);
+            Variables.AddEnergy(temp * -1);
             energyShield += temp;
         }
 
