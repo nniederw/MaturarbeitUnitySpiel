@@ -2,6 +2,8 @@
 public class Asteorid : MonoBehaviour
 {
     private bool b = true;
+    [SerializeField] private GameObject player;
+
     [SerializeField] private GameObject destroyedAstroid;
     [SerializeField] private float health = 1000;
     [SerializeField] private GameObject parAsteorid;
@@ -17,6 +19,9 @@ public class Asteorid : MonoBehaviour
             health = 0;
         }
     }
+    void Start() {
+        player = GameObject.Find("player");
+    }
     void Update()
     {
         if ((health <= 0) & b)
@@ -27,9 +32,9 @@ public class Asteorid : MonoBehaviour
             dast.transform.rotation = transform.rotation;
             dast.transform.localScale = transform.localScale;
 
-            Debug.Log("Scale Asteroid" + transform.localScale);
-
-            Destroy(gameObject);            
+            player.GetComponent<Variables>().score += 1;
+            
+            Destroy(gameObject);           
         }
     }
 }

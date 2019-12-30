@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\KeyManager.cs" />
      <Compile Include="Assets\Scripts\MainKamera.cs" />
      <Compile Include="Assets\Scripts\Movement.cs" />
+     <Compile Include="Assets\Scripts\Score.cs" />
      <Compile Include="Assets\Scripts\Shot.cs" />
      <Compile Include="Assets\Scripts\ShotManager.cs" />
      <Compile Include="Assets\Scripts\Turret.cs" />
