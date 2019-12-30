@@ -8,8 +8,10 @@ public class AsteoridSpawner : MonoBehaviour
     private float tmpsize;
 
     private GameObject ast;
+    public GameObject asteroidContainer;
     private void Start()
     {
+        asteroidContainer = new GameObject("AsteroidContainer");
         SpawnAsteorids(numbAsteorids, spacing, size);
     }
     void SpawnAsteorids(int numberAsteorids, float spacing, float size)
@@ -22,7 +24,10 @@ public class AsteoridSpawner : MonoBehaviour
             Vector3 position = new Vector3(spacing * NextGaussian(), spacing * NextGaussian(), spacing * NextGaussian()); ;
             Quaternion rotation = new Quaternion(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
             Vector3 scale = new Vector3(tmpsize, tmpsize, tmpsize); ;
-            ast = Instantiate(asteorid, position, rotation);
+            ast = Instantiate(asteorid, asteroidContainer.transform);
+            
+            ast.transform.rotation = rotation;
+            ast.transform.position = position;
             ast.transform.localScale = scale;
             i++;
         }

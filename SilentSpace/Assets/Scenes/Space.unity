@@ -1621,7 +1621,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1386452777
 Transform:
   m_ObjectHideFlags: 0
@@ -2121,6 +2121,7 @@ MonoBehaviour:
   numbAsteorids: 500
   spacing: 500
   size: 20
+  asteroidContainer: {fileID: 0}
 --- !u!4 &1776863511
 Transform:
   m_ObjectHideFlags: 0
