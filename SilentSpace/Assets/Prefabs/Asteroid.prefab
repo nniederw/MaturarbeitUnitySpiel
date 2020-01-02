@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7599155060833870104}
   m_Layer: 0
-  m_Name: Asteorid
+  m_Name: Asteroid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -128,7 +128,7 @@ MonoBehaviour:
   destroyedAstroid: {fileID: 3500351665365891375, guid: 862426c550b313546a3b856b09b50f25,
     type: 3}
   health: 1000
-  parAsteorid: {fileID: 7557329690611123271}
+  parAsteroid: {fileID: 7557329690611123271}
 --- !u!64 &1794930246671701722
 MeshCollider:
   m_ObjectHideFlags: 0

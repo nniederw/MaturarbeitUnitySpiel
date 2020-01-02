@@ -18,6 +18,7 @@ public class Variables : MonoBehaviour
     private Shot shot;
 
     private float temp;
+
     private void Start()
     {
         health = maxHealth;

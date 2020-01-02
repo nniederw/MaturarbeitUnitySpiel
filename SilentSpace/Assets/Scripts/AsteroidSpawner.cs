@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
-public class AsteoridSpawner : MonoBehaviour
+public class AsteroidSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject asteorid;
-    [SerializeField] private int numbAsteorids = 500;
+    [SerializeField] private GameObject asteroid;
+    [SerializeField] private int numbAsteroids = 500;
     [SerializeField] private float spacing = 500;
     [SerializeField] private float size= 20;
     private float tmpsize;
@@ -12,19 +12,19 @@ public class AsteoridSpawner : MonoBehaviour
     private void Start()
     {
         asteroidContainer = new GameObject("AsteroidContainer");
-        SpawnAsteorids(numbAsteorids, spacing, size);
+        SpawnAsteroids(numbAsteroids, spacing, size);
     }
-    void SpawnAsteorids(int numberAsteorids, float spacing, float size)
+    void SpawnAsteroids(int numberAsterorids, float spacing, float size)
     {
         int i = 0;
-        while (i < numberAsteorids)
+        while (i < numberAsterorids)
         {
             tmpsize = size*Random.Range(0.5f, 2f); 
 
             Vector3 position = new Vector3(spacing * NextGaussian(), spacing * NextGaussian(), spacing * NextGaussian()); ;
             Quaternion rotation = new Quaternion(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
             Vector3 scale = new Vector3(tmpsize, tmpsize, tmpsize); ;
-            ast = Instantiate(asteorid, asteroidContainer.transform);
+            ast = Instantiate(asteroid, asteroidContainer.transform);
             
             ast.transform.rotation = rotation;
             ast.transform.position = position;

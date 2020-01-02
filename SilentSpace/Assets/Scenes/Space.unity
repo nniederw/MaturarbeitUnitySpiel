@@ -2098,7 +2098,7 @@ GameObject:
   - component: {fileID: 1776863511}
   - component: {fileID: 1776863510}
   m_Layer: 0
-  m_Name: AsteoridSpawner
+  m_Name: AsteroidSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2116,9 +2116,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11fd351a5a96264439324d045f5837b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asteorid: {fileID: 7557329690611123271, guid: f3eb285c91065e649bbf6868079166d2,
+  asteroid: {fileID: 7557329690611123271, guid: f3eb285c91065e649bbf6868079166d2,
     type: 3}
-  numbAsteorids: 500
+  numbAsteroids: 500
   spacing: 500
   size: 20
   asteroidContainer: {fileID: 0}

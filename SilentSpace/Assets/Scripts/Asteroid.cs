@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
-public class Asteorid : MonoBehaviour
+public class Asteroid : MonoBehaviour
 {
     private bool b = true;
     [SerializeField] private GameObject player;
 
     [SerializeField] private GameObject destroyedAstroid;
     [SerializeField] private float health = 1000;
-    [SerializeField] private GameObject parAsteorid;
+    [SerializeField] private GameObject parAsteroid;
     private void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.tag == "Shot")
@@ -27,7 +27,7 @@ public class Asteorid : MonoBehaviour
         if ((health <= 0) & b)
         {
             GameObject dast;
-            dast = Instantiate(destroyedAstroid, parAsteorid.transform);
+            dast = Instantiate(destroyedAstroid, parAsteroid.transform);
             dast.transform.position = transform.position;
             dast.transform.rotation = transform.rotation;
             dast.transform.localScale = transform.localScale;

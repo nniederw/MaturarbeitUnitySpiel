@@ -55,10 +55,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Asteorid.cs" />
-     <Compile Include="Assets\Scripts\AsteoridSpawner.cs" />
+     <Compile Include="Assets\Scripts\Asteroid.cs" />
+     <Compile Include="Assets\Scripts\AsteroidSpawner.cs" />
      <Compile Include="Assets\Scripts\Bars.cs" />
-     <Compile Include="Assets\Scripts\FirstPerson.cs" />
      <Compile Include="Assets\Scripts\KeyManager.cs" />
      <Compile Include="Assets\Scripts\MainKamera.cs" />
      <Compile Include="Assets\Scripts\Movement.cs" />
