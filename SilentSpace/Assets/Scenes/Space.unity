@@ -307,7 +307,7 @@ GameObject:
   - component: {fileID: 380965899}
   - component: {fileID: 380965898}
   m_Layer: 0
-  m_Name: Sphere (1)
+  m_Name: Moon 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -343,7 +343,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 25cfeae3fc016a84780303f624f81cc1, type: 2}
+  - {fileID: 2100000, guid: 20ce5a86cf298cf4b8968fec88112ce3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2008,7 +2008,7 @@ GameObject:
   - component: {fileID: 1700335396}
   - component: {fileID: 1700335395}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Moon 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2044,7 +2044,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 25cfeae3fc016a84780303f624f81cc1, type: 2}
+  - {fileID: 2100000, guid: 20ce5a86cf298cf4b8968fec88112ce3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
