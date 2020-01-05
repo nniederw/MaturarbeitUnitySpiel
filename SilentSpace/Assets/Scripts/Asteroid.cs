@@ -17,6 +17,7 @@ public class Asteroid : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             health = 0;
+            player.GetComponent<Variables>().health -= 200;
         }
     }
     void Start() {

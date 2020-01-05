@@ -9,12 +9,14 @@ public static class KeyManager
     private static string keydown = "w";
     private static string keyright = "d";
     private static string keyleft = "a";
+    private static string keyquit = "escape";
 
     private static bool shoot() { return Input.GetMouseButtonDown(0); }
     private static bool goUp() { return Input.GetKey(keyup); }
     private static bool goDown() { return Input.GetKey(keydown); }
     private static bool goRight() { return Input.GetKey(keyright); }
     private static bool goLeft() { return Input.GetKey(keyleft); }
+    private static bool goQuit() { return Input.GetKey(keyquit); }
 
     public static bool Shoot()
     {
@@ -59,4 +61,14 @@ public static class KeyManager
         }
         return b;
     }
+    public static bool GoQuit()
+    {
+        bool b = false;
+        if (goQuit())
+        {
+            b = true;
+        }
+        return b;
+    }
+
 }

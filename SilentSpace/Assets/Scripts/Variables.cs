@@ -5,7 +5,7 @@ public class Variables : MonoBehaviour
     public float score = 0; 
     [SerializeField] float currentEnergy = 500;
     [SerializeField] private float energyShield = 500;
-    [SerializeField] private float health = 1000;
+    [SerializeField] public float health = 1000;
     [SerializeField] private float maxEnergy = 1000;
     [SerializeField] private float maxEnergyShield = 1000;
     [SerializeField] private float maxHealth = 1000;
