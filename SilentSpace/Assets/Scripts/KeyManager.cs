@@ -10,6 +10,8 @@ public static class KeyManager
     private static string keyright = "d";
     private static string keyleft = "a";
     private static string keyquit = "escape";
+    private static string keyreplay = "r";
+
 
     private static bool shoot() { return Input.GetMouseButtonDown(0); }
     private static bool goUp() { return Input.GetKey(keyup); }
@@ -17,6 +19,7 @@ public static class KeyManager
     private static bool goRight() { return Input.GetKey(keyright); }
     private static bool goLeft() { return Input.GetKey(keyleft); }
     private static bool goQuit() { return Input.GetKey(keyquit); }
+    private static bool goReplay() { return Input.GetKey(keyreplay); }
 
     public static bool Shoot()
     {
@@ -65,6 +68,15 @@ public static class KeyManager
     {
         bool b = false;
         if (goQuit())
+        {
+            b = true;
+        }
+        return b;
+    }
+    public static bool GoReplay()
+    {
+        bool b = false;
+        if (goReplay())
         {
             b = true;
         }

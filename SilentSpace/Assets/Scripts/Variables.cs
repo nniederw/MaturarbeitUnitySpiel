@@ -16,6 +16,7 @@ public class Variables : MonoBehaviour
     public static float shipAcceleration = 0;
 
     private Shot shot;
+    [SerializeField] private GameObject gameOver;
 
     private float temp;
 
@@ -40,6 +41,14 @@ public class Variables : MonoBehaviour
         shipAcceleration = ScrollWheel;
 
         Bars.SetSize(health / maxHealth, energy / maxEnergy, energyShield / maxEnergyShield);
+
+
+
+        if(health<=0){
+            gameOver.SetActive(true);
+            Time.timeScale = 0;
+        }
+
     }
     private float Regeneration(float n, float max, float reg, bool minusEnergie)
     {
