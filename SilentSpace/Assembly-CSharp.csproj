@@ -94,6 +94,9 @@
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>D:/WorkGit/nniederw/MaturarbeitUnitySpiel/SilentSpace/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.InputSystem">
+ <HintPath>D:/WorkGit/nniederw/MaturarbeitUnitySpiel/SilentSpace/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.VisualEffectGraph.Runtime">
  <HintPath>D:/WorkGit/nniederw/MaturarbeitUnitySpiel/SilentSpace/Library/ScriptAssemblies/Unity.VisualEffectGraph.Runtime.dll</HintPath>
  </Reference>

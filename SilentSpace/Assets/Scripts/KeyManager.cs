@@ -5,21 +5,27 @@ using UnityEngine;
 public static class KeyManager
 {
     //private static string keyshoot = "space";
+
+
+    
     private static string keyup = "s";
     private static string keydown = "w";
     private static string keyright = "d";
     private static string keyleft = "a";
     private static string keyquit = "escape";
     private static string keyreplay = "r";
+    private static string keyshoot = "space";
+    
 
-
-    private static bool shoot() { return Input.GetMouseButtonDown(0); }
-    private static bool goUp() { return Input.GetKey(keyup); }
-    private static bool goDown() { return Input.GetKey(keydown); }
-    private static bool goRight() { return Input.GetKey(keyright); }
-    private static bool goLeft() { return Input.GetKey(keyleft); }
-    private static bool goQuit() { return Input.GetKey(keyquit); }
-    private static bool goReplay() { return Input.GetKey(keyreplay); }
+    //private static bool shootMouse() { return Input.GetMouseButtonDown(0); }
+    //private static bool shoot() { return Input.GetKey(keyshoot); }
+    private static bool shoot() { return Input.GetKeyDown("Shoot"); }
+    private static bool goUp() { return Input.GetKeyDown("Up"); }
+    private static bool goDown() { return Input.GetKeyDown("Down"); }
+    private static bool goRight() { return Input.GetKeyDown("Right"); }
+    private static bool goLeft() { return Input.GetKeyDown("Left"); }
+    private static bool goQuit() { return Input.GetKeyDown("Quit"); }
+    private static bool goReplay() { return Input.GetKeyDown("Reload"); }
 
     public static bool Shoot()
     {
