@@ -21,7 +21,7 @@ public class ShotManager : MonoBehaviour
     private void Update()
     {
         timer += Time.deltaTime;
-        if (Input.GetKeyDown("Shoot") & (timer >= delay) & (Variables.LeftEnergy() >= energyCost))
+        if (KeyManager.Shoot() & (timer >= delay) & (Variables.LeftEnergy() >= energyCost))
         {
             Variables.AddEnergy(energyCost * -1);
 

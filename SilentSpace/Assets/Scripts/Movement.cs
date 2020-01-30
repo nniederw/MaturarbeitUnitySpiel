@@ -35,15 +35,15 @@ public class Movement : MonoBehaviour
 
         if (velocity + Variables.shipAcceleration >= 0)
         {
-            if (Variables.LeftEnergy() >= Variables.shipAcceleration)
+            if (Variables.LeftEnergy() >= accelerationEnergyCost * Mathf.Abs(Variables.shipAcceleration))
             {
                 Variables.AddEnergy(accelerationEnergyCost * Mathf.Abs(Variables.shipAcceleration) * -1);
                 velocity += Variables.shipAcceleration;
-                Variables.ScrollWheel -= Variables.shipAcceleration * 0.2f;
+                Variables.inputAcceleration -= Variables.shipAcceleration * 0.2f;
             }
             else
             {
-                Variables.ScrollWheel -= Variables.shipAcceleration * 0.2f;
+                Variables.inputAcceleration -= Variables.shipAcceleration * 0.2f;
             }
         }
         else

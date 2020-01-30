@@ -383,7 +383,7 @@ GameObject:
   - component: {fileID: 380965898}
   m_Layer: 0
   m_Name: Moon 1
-  m_TagString: Untagged
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -418,7 +418,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 25cfeae3fc016a84780303f624f81cc1, type: 2}
+  - {fileID: 2100000, guid: 20ce5a86cf298cf4b8968fec88112ce3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -718,8 +718,8 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.01
-  far clip plane: 1e+10
-  field of view: 60
+  far clip plane: 1e+11
+  field of view: 70
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -2143,7 +2143,7 @@ GameObject:
   - component: {fileID: 1700335395}
   m_Layer: 0
   m_Name: Moon 2
-  m_TagString: Untagged
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2472,7 +2472,7 @@ MonoBehaviour:
   maxHealth: 1000
   energyRegeneration: 100
   energyShieldRegeneration: 50
-  sensitivity: 2
+  sensitivity: 0.1
   gameOver: {fileID: 278815666}
 --- !u!114 &1968017646
 MonoBehaviour:
@@ -2487,7 +2487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sidewaysForce: 500
-  accelerationEnergyCost: 10
+  accelerationEnergyCost: 5
 --- !u!64 &1968017647
 MeshCollider:
   m_ObjectHideFlags: 0

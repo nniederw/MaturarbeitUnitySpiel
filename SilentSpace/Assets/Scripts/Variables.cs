@@ -12,7 +12,7 @@ public class Variables : MonoBehaviour
     [SerializeField] private float energyRegeneration = 100;
     [SerializeField] private float energyShieldRegeneration = 50;
     [SerializeField] private float sensitivity = 2;
-    public static float ScrollWheel = 0;
+    public static float inputAcceleration = 0;
     public static float shipAcceleration = 0;
 
     private Shot shot;
@@ -36,9 +36,10 @@ public class Variables : MonoBehaviour
             energyShield += temp;
         }
 
-
-        ScrollWheel += Input.GetAxis("Mouse ScrollWheel") * sensitivity;
-        shipAcceleration = ScrollWheel;
+        if (KeyManager.IncreaseSpeed()) { inputAcceleration += 1 * sensitivity; }
+        else if(KeyManager.DecreaseSpeed()){ inputAcceleration -= 1*sensitivity; }
+        //inputAcceleration += Input.GetAxis("Mouse ScrollWheel") * sensitivity;
+        shipAcceleration = inputAcceleration;
 
         Bars.SetSize(health / maxHealth, energy / maxEnergy, energyShield / maxEnergyShield);
 
@@ -87,6 +88,10 @@ public class Variables : MonoBehaviour
                 health -= shot.damage;
                 Destroy(col.gameObject);
             }
+        }
+        if (col.gameObject.tag == "Planet")
+        {
+                health = 0;
         }
     }
 }
