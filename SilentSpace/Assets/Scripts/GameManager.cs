@@ -38,7 +38,6 @@ public class GameManager : MonoBehaviour
     public static void DoReplay() 
     {
 
-
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
       
     }

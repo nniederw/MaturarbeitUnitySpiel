@@ -568,7 +568,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &422947140
 Transform:
   m_ObjectHideFlags: 0
@@ -2252,8 +2252,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   asteroid: {fileID: 7557329690611123271, guid: f3eb285c91065e649bbf6868079166d2,
     type: 3}
-  numbAsteroids: 500
-  spacing: 500
+  numbAsteroids: 1500
+  spacing: 1000
   size: 20
   asteroidContainer: {fileID: 0}
 --- !u!4 &1776863511
@@ -2449,7 +2449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shot: {fileID: 6985186653773849127, guid: c1226913aa4707945b1b7b36d7c93312, type: 3}
   delay: 0.2
-  energyCost: 50
+  energyCost: 100
   shotDamage: 300
 --- !u!114 &1968017645
 MonoBehaviour:
@@ -2487,7 +2487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sidewaysForce: 500
-  accelerationEnergyCost: 5
+  accelerationEnergyCost: 8
 --- !u!64 &1968017647
 MeshCollider:
   m_ObjectHideFlags: 0

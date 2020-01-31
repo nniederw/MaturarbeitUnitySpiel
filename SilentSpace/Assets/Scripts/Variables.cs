@@ -23,9 +23,17 @@ public class Variables : MonoBehaviour
     private void Start()
     {
         health = maxHealth;
+        currentEnergy = 500;
+        inputAcceleration = 0;
+        shipAcceleration = 0;
+
     }
     private void Update()
     {
+        if (KeyManager.GoReplay()) {
+            DoReload();
+        }
+
         currentEnergy = energy;
         
         energy = Regeneration(energy, maxEnergy, energyRegeneration, false);
@@ -93,5 +101,11 @@ public class Variables : MonoBehaviour
         {
                 health = 0;
         }
+    }
+
+    public static void DoReload() 
+    {
+        inputAcceleration = 0;
+        shipAcceleration = 0;
     }
 }
