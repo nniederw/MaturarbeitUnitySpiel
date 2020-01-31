@@ -136,7 +136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9118755
 Transform:
   m_ObjectHideFlags: 0
@@ -216,7 +216,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &190661106
 Transform:
   m_ObjectHideFlags: 0
@@ -568,7 +568,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &422947140
 Transform:
   m_ObjectHideFlags: 0
@@ -1974,7 +1974,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1545728153
 Transform:
   m_ObjectHideFlags: 0
@@ -2252,8 +2252,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   asteroid: {fileID: 7557329690611123271, guid: f3eb285c91065e649bbf6868079166d2,
     type: 3}
-  numbAsteroids: 1500
-  spacing: 1000
+  numbAsteroids: 500
+  spacing: 500
   size: 20
   asteroidContainer: {fileID: 0}
 --- !u!4 &1776863511
